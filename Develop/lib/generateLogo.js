@@ -1,8 +1,9 @@
 const Circle = require('./Circle.js');
 const Square = require('./Square.js');
 const Triangle = require('./Triangle.js');
+const Shape = require('./shape.js');
 
-function generate(response) {
+function generateLogo(response) {
     if (response.shape === 'Circle') {
         let logo = new Circle(response.shapeColor, response.text, response.textColor)
         return logo.render()
@@ -17,4 +18,4 @@ function generate(response) {
     }
 };
 
-module.exports = generate;
+module.exports = generateLogo;
